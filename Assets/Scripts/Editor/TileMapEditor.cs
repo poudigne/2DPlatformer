@@ -190,15 +190,14 @@ public class TileMapEditor : Editor
         if (map.boxCollider)
         {
             if (tile.GetComponent<BoxCollider2D>() == null)
-            {
                 tile.AddComponent<BoxCollider2D>();
-                tile.GetComponent<BoxCollider2D>().size = new Vector2(map.tileSize.x / 100, map.tileSize.y / 100);
-            }
-            else
-            {
-                if (tile.GetComponent<BoxCollider2D>() != null)
-                    DestroyImmediate(tile.GetComponent<BoxCollider2D>());
-            }
+            tile.GetComponent<BoxCollider2D>().size = new Vector2(map.tileSize.x / 100, map.tileSize.y / 100);
+            
+        }
+        else
+        {
+            if (tile.GetComponent<BoxCollider2D>() != null)
+                DestroyImmediate(tile.GetComponent<BoxCollider2D>());
         }
     }
 
