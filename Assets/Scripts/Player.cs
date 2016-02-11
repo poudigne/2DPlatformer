@@ -8,6 +8,9 @@ public class Player : MonoBehaviour {
     public float jumpSpeed = 5f;
     public bool standing;
 
+    public GameObject ammo;
+    public Transform fireMarker;
+
     private Animator playerAnimation;
     private Rigidbody2D body;
 
@@ -66,4 +69,14 @@ public class Player : MonoBehaviour {
         else
             body.AddForce(new Vector2(forceX, forceY));
 	}
+
+
+    public void Fire()
+    {
+        if (ammo != null)
+        {
+            var clone = Instantiate(ammo, fireMarker.position, Quaternion.identity) as GameObject;
+            clone.transform.localScale = transform.localScale;
+        }
+    }
 }
