@@ -4,7 +4,6 @@ using System.Collections;
 
 public class TileMap : MonoBehaviour {
 
-    [HideInInspector]
     public Vector2 mapSize = new Vector2(20, 10);
     [HideInInspector]
     public Texture2D texture2D;

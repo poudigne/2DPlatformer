@@ -29,9 +29,9 @@ public class TileMapEditor : Editor
     {
         base.OnInspectorGUI();
 
-        GUILayout.BeginVertical();
-        EditorGUILayout.Vector2Field("Map Size: ", map.mapSize);
-        GUILayout.EndVertical();
+        //GUILayout.BeginVertical();
+        //EditorGUILayout.Vector2Field("Map Size: ", map.mapSize);
+        //GUILayout.EndVertical();
 
         GUILayout.BeginHorizontal();
         GUILayout.Label("Texture2D ");
