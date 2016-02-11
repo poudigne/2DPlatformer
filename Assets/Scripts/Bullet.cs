@@ -19,4 +19,11 @@ public class Bullet : MonoBehaviour {
 	void Update () {
 	
 	}
+    void OnCollisionEnter2D(Collision2D target)
+    {
+        if (target.gameObject.layer == LayerMask.NameToLayer("Solid"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }
