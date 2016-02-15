@@ -23,7 +23,7 @@ public class Bullet : MonoBehaviour {
     {
         if (target.gameObject.layer == LayerMask.NameToLayer("Solid"))
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
     }
 }
